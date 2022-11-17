@@ -21,6 +21,4 @@ jobs:
             rm -rf openv2x-aio-beihai.tar.gz && wget https://openv2x.oss-ap-southeast-1.aliyuncs.com/deploy/beihai/openv2x-aio-beihai.tar.gz
             rm -rf src && tar zxvf openv2x-aio-beihai.tar.gz
             cd src
-            . ~/.bashrc
-            env | grep OPENV2X | grep -v -i pass > /tmp/env.txt
             bash install.sh
