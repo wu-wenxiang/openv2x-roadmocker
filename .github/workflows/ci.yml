@@ -63,8 +63,10 @@ jobs:
           key: ${{ secrets.AIO_ALBANY_KEY }}
           port: ${{ secrets.AIO_ALBANY_PORT }}
           script: |
-            set -x
+            set -ex
             rm -rf openv2x-aio-beihai.tar.gz && wget https://openv2x.oss-ap-southeast-1.aliyuncs.com/deploy/beihai/openv2x-aio-beihai.tar.gz
             rm -rf src && tar zxvf openv2x-aio-beihai.tar.gz
             cd src
-            bash ./install.sh
+            cat install.sh
+            sleep 5
+            bash install.sh
